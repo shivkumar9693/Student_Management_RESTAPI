@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    <h3>Students Details</h3>
+    <div>
+        <% for(student of students){ %>
+            <hr/>
+        <h3>id :<%= student.id %></h3>
+        <h3>name :@<%= student.name %></h3>
+        <h3>roll no: <%= student.rollno %></h3>
+        <h3> Address: <%= student.address %></h3>
+        <hr/>
+        <a href="/students/<%= student.id %>">view Student🔍</a>&nbsp;&nbsp;&nbsp;
+        <a href="/students/<%= student.id %>/edit">Edit Student🔁</a>
+        <hr/>
+        <% } %>
+    </div>
+    <a href="/students/new">Add New Student⚙️</a>
+</body>
+</html>
