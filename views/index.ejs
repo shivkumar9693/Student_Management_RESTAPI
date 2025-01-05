@@ -16,7 +16,10 @@
         <h3> Address: <%= student.address %></h3>
         <hr/>
         <a href="/students/<%= student.id %>">view Student🔍</a>&nbsp;&nbsp;&nbsp;
-        <a href="/students/<%= student.id %>/edit">Edit Student🔁</a>
+        <a href="/students/<%= student.id %>/edit">Edit Student🔁</a> 
+        <form method="post" action="/students/<%= student.id %>?_method=DELETE">
+        <br> <button>Delete❌</button>
+        </form>
         <hr/>
         <% } %>
     </div>

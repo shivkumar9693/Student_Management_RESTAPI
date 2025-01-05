@@ -63,6 +63,12 @@ app.get("/students/:id/edit",(req,res)=>{
     let student=students.find((st)=>id===st.id);
     res.render("edit.ejs",{student});
 })
+//delete student
+app.delete("/students/:id",(req,res)=>{
+    let{id}=req.params;
+    students=students.filter((st)=>id != st.id);
+    res.redirect("/students");
+})
 //server
 app.listen(port,()=>{
     console.log(`server running on ${port}`);
